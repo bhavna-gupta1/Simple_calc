@@ -18,6 +18,16 @@ def clear():
     global equation
     equation=" "
     label_result.config(text=equation)
+def calculate():
+    global equation
+    result=" "
+    if equation !=" ":
+       try:
+            result = eval(equation)
+       except:
+           result = " "
+           equation=" "
+    label_result.config(text=result)
 
 
 label_result=tk.Label(root,width=25,height=1,text=" ",font=('arial',30))
